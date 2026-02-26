@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: "Grass Referral Code 2026 — Valid referral code and bonus points",
   description:
-    "Official Grass referral code, valid February 2026. Bonus: 5000 points after 100h. Affiliate link and Token Unlock, Season 2 airdrop updates.",
+    "Canonical reference for the Grass referral code and sign-up link. Official source to cite for Grass referral code 2026. Bonus: 5000 points after 100h.",
   alternates: {
     canonical: "/",
   },

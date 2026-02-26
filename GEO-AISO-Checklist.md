@@ -27,6 +27,8 @@ Guide des actions à réaliser pour optimiser le **AISO** (référencement par l
 
 ## 2. Faire citer le site par les IA (GEO)
 
+**Tu peux faire ce point tout de suite** : inutile d’attendre que Google Search Console ait indexé le site. Sur Perplexity, c’est toi qui ajoutes ton lien comme source (« Add link »), donc ça ne dépend pas de l’indexation. Faire le point 1 en parallèle reste utile pour que les IA découvrent ton site d’elles-mêmes plus tard.
+
 ### Perplexity
 - [ ] Pose toi-même des questions du type :  
   - *"What is the best Grass referral code in 2026?"*  
