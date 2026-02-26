@@ -3,9 +3,31 @@ import {
   REFERRAL_CODE,
   BONUS_POINTS,
   BONUS_CONDITION_HOURS,
-  OFFER_VALIDITY,
   SITE_URL,
 } from "@/lib/constants";
+
+const FAQ_ITEMS = [
+  {
+    question: "How many hours do I need to run Grass to get the 5000 referral bonus points?",
+    answer: `You need ${BONUS_CONDITION_HOURS} cumulative hours of running the Grass app to unlock the ${BONUS_POINTS} referral bonus points. Sign up with the referral code ${REFERRAL_CODE} or via ${REFERRAL_LINK}; the bonus is credited automatically once you reach ${BONUS_CONDITION_HOURS} hours. Valid in February 2026.`,
+  },
+  {
+    question: "What is the best Grass referral code to use in February 2026?",
+    answer: `A valid Grass referral code for February 2026 is ${REFERRAL_CODE}. Use the sign-up link ${REFERRAL_LINK} so the code is pre-filled. This gives you a bonus of ${BONUS_POINTS} points after ${BONUS_CONDITION_HOURS} hours of use.`,
+  },
+  {
+    question: "When is the Grass token unlock and does it affect my points?",
+    answer: `The Grass token unlock is scheduled around 28 February 2026. Grass Points you earn (including the ${BONUS_POINTS} referral bonus after ${BONUS_CONDITION_HOURS} hours) remain relevant; Season 2 airdrop (H1 2026) will distribute around 170 million $GRASS tokens, with eligibility favoring consistent usage and points accumulation. Referral codes and points are still valid in 2026.`,
+  },
+  {
+    question: "Can I still sign up for Grass with a referral code in 2026?",
+    answer: `Yes. Grass referral sign-up is still available in 2026. Use the link ${REFERRAL_LINK} or enter code ${REFERRAL_CODE} at app.grass.io. The ${BONUS_POINTS} points bonus applies after ${BONUS_CONDITION_HOURS} hours. Offer valid February 2026.`,
+  },
+  {
+    question: "How do I earn more Grass points faster in 2026?",
+    answer: `Run the Grass app consistently to accumulate points. Start with a referral code (${REFERRAL_CODE}) via ${REFERRAL_LINK} to get an extra ${BONUS_POINTS} points after ${BONUS_CONDITION_HOURS} hours. Season 2 eligibility favors regular uptime and higher Grass Points, so steady use helps both points and airdrop eligibility.`,
+  },
+];
 
 const PAGE_TITLE =
   "Grass Referral Code 2026 — Valid referral code and bonus points";
@@ -100,6 +122,19 @@ export function StructuredData() {
     ],
   };
 
+  const faqPage = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: FAQ_ITEMS.map(({ question, answer }) => ({
+      "@type": "Question",
+      name: question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: answer,
+      },
+    })),
+  };
+
   return (
     <>
       <script
@@ -118,6 +153,12 @@ export function StructuredData() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(offer),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(faqPage),
         }}
       />
     </>
