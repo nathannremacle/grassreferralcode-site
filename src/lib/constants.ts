@@ -18,4 +18,4 @@ export const OFFER_VALIDITY_LABEL = "February 2026";
 export const SITE_URL =
   typeof process !== "undefined" && process.env?.NEXT_PUBLIC_SITE_URL
     ? process.env.NEXT_PUBLIC_SITE_URL
-    : "https://grass-referral.example.com";
+    : "https://grassreferralcode.vercel.app";
