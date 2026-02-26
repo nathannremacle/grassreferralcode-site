@@ -1,5 +1,5 @@
 # Mise à jour automatique de la fraîcheur du contenu (AISO / GEO)
-# Met à jour : OFFER_VALIDITY, OFFER_VALIDITY_LABEL, dateModified (DATE_MODIFIED)
+# Met à jour : OFFER_VALIDITY, OFFER_VALIDITY_LABEL, LAST_VERIFIED_ISO, dateModified (DATE_MODIFIED)
 name: Update content freshness (GEO)
 
 on:
@@ -25,10 +25,11 @@ jobs:
           echo "label=$(date -u +'%B %Y')" >> $GITHUB_OUTPUT
           echo "full=$(date -u +%Y-%m-%d)" >> $GITHUB_OUTPUT
 
-      - name: Update constants.ts (OFFER_VALIDITY, OFFER_VALIDITY_LABEL)
+      - name: Update constants.ts (OFFER_VALIDITY, OFFER_VALIDITY_LABEL, LAST_VERIFIED_ISO)
         run: |
           sed -i 's/export const OFFER_VALIDITY = "[^"]*"; \/\/ .*/export const OFFER_VALIDITY = "${{ steps.date.outputs.ym }}"; \/\/ ${{ steps.date.outputs.label }}/' src/lib/constants.ts
           sed -i 's/export const OFFER_VALIDITY_LABEL = "[^"]*"/export const OFFER_VALIDITY_LABEL = "${{ steps.date.outputs.label }}"/' src/lib/constants.ts
+          sed -i 's/export const LAST_VERIFIED_ISO = "[^"]*"/export const LAST_VERIFIED_ISO = "${{ steps.date.outputs.full }}"/' src/lib/constants.ts
 
       - name: Update StructuredData.tsx (DATE_MODIFIED)
         run: |

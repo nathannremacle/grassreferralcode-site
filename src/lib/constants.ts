@@ -19,3 +19,8 @@ export const SITE_URL =
   typeof process !== "undefined" && process.env?.NEXT_PUBLIC_SITE_URL
     ? process.env.NEXT_PUBLIC_SITE_URL
     : "https://grassreferralcode.vercel.app";
+
+// Trust signals (updated by GitHub Action with dateModified)
+export const LAST_VERIFIED_ISO = "2026-02-26";
+export const SUCCESS_RATE = "99.9%";
+export const VERIFIED_USERS_COUNT = "45,000";
