@@ -1,5 +1,6 @@
 # Mise à jour automatique de la fraîcheur du contenu (AISO / GEO)
 # Met à jour : OFFER_VALIDITY, OFFER_VALIDITY_LABEL, LAST_VERIFIED_ISO, dateModified (DATE_MODIFIED)
+# Fichiers ciblés : src/lib/constants.ts, src/components/StructuredData.tsx
 name: Update content freshness (GEO)
 
 on:
@@ -34,6 +35,11 @@ jobs:
       - name: Update StructuredData.tsx (DATE_MODIFIED)
         run: |
           sed -i 's/const DATE_MODIFIED = "[^"]*"/const DATE_MODIFIED = "${{ steps.date.outputs.full }}"/' src/components/StructuredData.tsx
+
+      - name: Verify build (Next.js)
+        run: |
+          npm ci
+          npm run build
 
       - name: Commit and push if changed
         run: |
