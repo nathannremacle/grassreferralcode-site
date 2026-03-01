@@ -7,7 +7,22 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      /* Grass Media Kit — https://www.grass.io/media-kit */
+      colors: {
+        grass: {
+          primary: "#ABF600",
+          secondary: "#F2FED1",
+          bg: "#F3F3F3",
+          "text-secondary": "#404040",
+          white: "#FFFFFF",
+          black: "#111111",
+        },
+      },
+      fontFamily: {
+        karla: ["var(--font-karla)", "Karla", "system-ui", "sans-serif"],
+      },
+    },
   },
   plugins: [],
 };

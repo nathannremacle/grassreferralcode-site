@@ -2,19 +2,91 @@
 @tailwind components;
 @tailwind utilities;
 
+/**
+ * Grass Media Kit — https://www.grass.io/media-kit
+ * Primary #ABF600, Secondary #F2FED1, Background #F3F3F3
+ * Text Secondary #404040, White #FFFFFF, Black #111111
+ * Color proportion: 55% primary, 35% secondary, 10% other
+ * Animations inspired by https://www.grass.io
+ */
 :root {
-  --foreground: #0a0a0a;
-  --background: #fafafa;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground: #fafafa;
-    --background: #0a0a0a;
-  }
+  --grass-primary: #ABF600;
+  --grass-secondary: #F2FED1;
+  --grass-bg: #F3F3F3;
+  --grass-text: #111111;
+  --grass-text-secondary: #404040;
+  --grass-white: #FFFFFF;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
+  color: var(--grass-text);
+  background: var(--grass-bg);
 }
+
+/* --- Animations (grass.io style) --- */
+@keyframes grass-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes grass-slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes grass-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(171, 246, 0, 0.25);
+  }
+  50% {
+    box-shadow: 0 0 20px 4px rgba(171, 246, 0, 0.15);
+  }
+}
+
+@keyframes grass-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-grass-fade-in {
+  animation: grass-fade-in 0.6s ease-out forwards;
+}
+
+.animate-grass-slide-up {
+  animation: grass-slide-up 0.6s ease-out forwards;
+}
+
+.animate-grass-glow {
+  animation: grass-glow 2.5s ease-in-out infinite;
+}
+
+.animate-grass-float {
+  animation: grass-float 4s ease-in-out infinite;
+}
+
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+.delay-600 { animation-delay: 600ms; }
+
+.opacity-0 { opacity: 0; }

@@ -1,6 +1,15 @@
 import type { Metadata } from "next";
+import { Karla } from "next/font/google";
 import { SITE_URL } from "@/lib/constants";
 import "./globals.css";
+
+/** Grass Media Kit typography: Karla, weights 200–800 — https://www.grass.io/media-kit */
+const karla = Karla({
+  subsets: ["latin"],
+  variable: "--font-karla",
+  display: "swap",
+  weight: ["200", "300", "400", "500", "700", "800"],
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -37,7 +46,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="antialiased">{children}</body>
+      <body className={`${karla.variable} font-karla antialiased`}>{children}</body>
     </html>
   );
 }
