@@ -9,7 +9,7 @@ import {
 } from "@/lib/constants";
 
 // Updated by GitHub Action "update-freshness" (dateModified only)
-const DATE_MODIFIED = "2026-02-26";
+const DATE_MODIFIED = "2026-03-01";
 
 function lastDayOfMonth(ym: string): string {
   const [y, m] = ym.split("-").map(Number);
