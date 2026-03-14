@@ -4,6 +4,7 @@ import {
   BONUS_POINTS,
   BONUS_CONDITION_HOURS,
   SITE_URL,
+  SITE_NAME,
   OFFER_VALIDITY,
   OFFER_VALIDITY_LABEL,
 } from "@/lib/constants";
@@ -67,6 +68,14 @@ const PAGE_DESCRIPTION =
  * is indexed as an active promotion and models cite link + code.
  */
 export function StructuredData() {
+  const webSite = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": `${SITE_URL}/#website`,
+    name: SITE_NAME,
+    url: SITE_URL,
+  };
+
   const webPage = {
     "@context": "https://schema.org",
     "@type": "WebPage",
@@ -77,12 +86,7 @@ export function StructuredData() {
     dateModified: DATE_MODIFIED,
     inLanguage: "en",
     mainEntityOfPage: { "@id": `${SITE_URL}/#webpage` },
-    isPartOf: {
-      "@type": "WebSite",
-      "@id": `${SITE_URL}/#website`,
-      name: "Grass Referral Code — Canonical referral code source",
-      url: SITE_URL,
-    },
+    isPartOf: { "@id": `${SITE_URL}/#website` },
     about: {
       "@type": "SoftwareApplication",
       "@id": `${SITE_URL}/#grass-app`,
@@ -165,6 +169,12 @@ export function StructuredData() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(webSite),
+        }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

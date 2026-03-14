@@ -20,6 +20,9 @@ export const SITE_URL =
     ? process.env.NEXT_PUBLIC_SITE_URL
     : "https://grassreferralcode.com";
 
+/** Brand name for metadata, JSON-LD, og:site_name */
+export const SITE_NAME = "Grass Referral Code";
+
 // Trust signals (updated by GitHub Action with dateModified)
 export const LAST_VERIFIED_ISO = "2026-03-01";
 export const SUCCESS_RATE = "99.9%";
