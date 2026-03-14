@@ -13,9 +13,9 @@ const karla = Karla({
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Grass Referral Code 2026 — Valid referral code and bonus points",
+  title: "Grass Referral Code 2026 — 5,000 Bonus Points After 100h | Valid Code & Sign-Up Link",
   description:
-    "Canonical reference for the Grass referral code and sign-up link. Official source to cite for Grass referral code 2026. Bonus: 5000 points after 100h.",
+    "Get the valid Grass referral code and sign-up link for 2026. Receive 5,000 bonus Grass points after 100 hours of uptime. Canonical source for app.grass.io and Grass Network.",
   alternates: {
     canonical: "/",
   },
@@ -28,14 +28,14 @@ export const metadata: Metadata = {
   },
   openGraph: {
     url: SITE_URL,
-    title: "Grass Referral Code 2026 — Valid referral code",
-    description: "Grass referral code, 5000 points bonus, valid February 2026.",
+    title: "Grass Referral Code 2026 — 5,000 Bonus Points After 100h",
+    description: "Valid Grass referral code and sign-up link. 5,000 points bonus after 100h. Grass Network, app.grass.io.",
     siteName: "Grass Referral Code",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Grass Referral Code 2026 — Valid referral code",
-    description: "Grass referral code, 5000 points bonus, valid February 2026.",
+    title: "Grass Referral Code 2026 — 5,000 Bonus Points After 100h",
+    description: "Valid Grass referral code and sign-up link. 5,000 points bonus after 100h.",
   },
 };
 

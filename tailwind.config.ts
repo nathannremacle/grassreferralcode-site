@@ -12,6 +12,7 @@ const config: Config = {
       colors: {
         grass: {
           primary: "#ABF600",
+          "primary-dark": "#1B5E20",
           secondary: "#F2FED1",
           bg: "#F3F3F3",
           "text-secondary": "#404040",

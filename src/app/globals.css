@@ -11,6 +11,7 @@
  */
 :root {
   --grass-primary: #ABF600;
+  --grass-primary-dark: #1B5E20; /* Links on light bg: WCAG AA contrast */
   --grass-secondary: #F2FED1;
   --grass-bg: #F3F3F3;
   --grass-text: #111111;
