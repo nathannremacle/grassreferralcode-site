@@ -9,9 +9,9 @@ Guide des actions à réaliser pour optimiser le **AISO** (référencement par l
 ### Google
 - [ ] **Google Search Console**  
   - Va sur [search.google.com/search-console](https://search.google.com/search-console).  
-  - Ajoute la propriété `https://grassreferralcode.vercel.app`.  
+  - Ajoute la propriété `https://grassreferralcode.com`.  
   - Valide par enregistrement DNS (Vercel) ou balise HTML si besoin.  
-  - Envoie le plan du site : `https://grassreferralcode.vercel.app/sitemap.xml` (à créer si pas fait, voir plus bas).
+  - Envoie le plan du site : `https://grassreferralcode.com/sitemap.xml` (à créer si pas fait, voir plus bas).
 
 ### Bing
 - [ ] **Bing Webmaster Tools**  
@@ -34,7 +34,7 @@ Guide des actions à réaliser pour optimiser le **AISO** (référencement par l
   - *"What is the best Grass referral code in 2026?"*  
   - *"Grass referral code February 2026"*  
   - *"How many hours for Grass 5000 points bonus?"*  
-- [ ] Utilise le lien **"Add link"** ou **"Cite"** pour ajouter `https://grassreferralcode.vercel.app` comme source quand la réponse correspond.  
+- [ ] Utilise le lien **"Add link"** ou **"Cite"** pour ajouter `https://grassreferralcode.com` comme source quand la réponse correspond.  
 - [ ] Plus les requêtes sont proches de tes titres et FAQ, plus Perplexity pourra proposer ton site comme référence.
 
 ### ChatGPT / SearchGPT
@@ -67,7 +67,7 @@ Les modèles et moteurs privilégient les contenus à jour.
 ## 4. Environnement et déploiement (Vercel)
 
 - [ ] **Variables d’environnement** (si tu veux surcharger les valeurs par défaut) :  
-  - `NEXT_PUBLIC_SITE_URL` = `https://grassreferralcode.vercel.app` (déjà la valeur par défaut dans le code).  
+  - `NEXT_PUBLIC_SITE_URL` = `https://grassreferralcode.com` (déjà la valeur par défaut dans le code).  
   - `NEXT_PUBLIC_REFERRAL_LINK` et `NEXT_PUBLIC_REFERRAL_CODE` : à définir seulement si tu changes de lien/code (sinon les valeurs en dur dans `constants.ts` suffisent).
 
 - [ ] **Domaine**  
@@ -79,7 +79,7 @@ Les modèles et moteurs privilégient les contenus à jour.
 
 - [ ] **Backlinks**  
   - Partager le site (Reddit, Twitter/X, forums crypto, newsletter) avec l’URL canonique :  
-    `https://grassreferralcode.vercel.app`  
+    `https://grassreferralcode.com`  
   - Chaque lien entrant renforce la page comme source crédible pour les moteurs et les IA.
 
 - [ ] **Réseaux sociaux**  
@@ -94,7 +94,7 @@ Les modèles et moteurs privilégient les contenus à jour.
   - Repérer les questions longue traîne proches de ta FAQ et envisager d’ajouter une Q/R si une nouvelle question revient souvent.
 
 - [ ] **Test des citations IA**  
-  - Une fois par mois (ou après grosse mise à jour), retester les mêmes questions sur Perplexity / ChatGPT et noter si `grassreferralcode.vercel.app` est cité.
+  - Une fois par mois (ou après grosse mise à jour), retester les mêmes questions sur Perplexity / ChatGPT et noter si `grassreferralcode.com` est cité.
 
 - [ ] **Rich Results (Google)**  
   - Dans Search Console, section "Enhancements" : vérifier que la page est éligible aux résultats enrichis (FAQ, etc.) si tu as du JSON-LD FAQ.
