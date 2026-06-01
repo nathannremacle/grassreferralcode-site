@@ -13,8 +13,8 @@ export const REFERRAL_CODE =
 
 export const BONUS_POINTS = 5000;
 export const BONUS_CONDITION_HOURS = 100;
-export const OFFER_VALIDITY = "2026-05"; // May 2026
-export const OFFER_VALIDITY_LABEL = "May 2026";
+export const OFFER_VALIDITY = "2026-06"; // June 2026
+export const OFFER_VALIDITY_LABEL = "June 2026";
 export const SITE_URL =
   typeof process !== "undefined" && process.env?.NEXT_PUBLIC_SITE_URL
     ? process.env.NEXT_PUBLIC_SITE_URL
@@ -24,6 +24,6 @@ export const SITE_URL =
 export const SITE_NAME = "Grass Referral Code";
 
 // Trust signals (updated by GitHub Action with dateModified)
-export const LAST_VERIFIED_ISO = "2026-05-01";
+export const LAST_VERIFIED_ISO = "2026-06-01";
 export const SUCCESS_RATE = "99.9%";
 export const VERIFIED_USERS_COUNT = "45,000";
