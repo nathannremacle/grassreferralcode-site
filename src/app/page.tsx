@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { StructuredData } from "@/components/StructuredData";
 import { CopyCodeButton } from "@/components/CopyCodeButton";
 import {
@@ -183,6 +184,14 @@ export default function Page() {
               <li><a href="#long-tail-faq" className="text-grass-primary-dark hover:underline">FAQ</a></li>
               <li><a href="#summary" className="text-grass-primary-dark hover:underline">Summary</a></li>
             </ul>
+            <div className="mt-3 border-t border-grass-secondary pt-3">
+              <h3 className="text-xs font-semibold uppercase tracking-wider text-grass-text-secondary">Related guides</h3>
+              <ul className="mt-1.5 flex flex-wrap gap-x-4 gap-y-1 text-sm">
+                <li><Link href="/how-to-install-grass" className="text-grass-primary-dark hover:underline">How to install Grass</Link></li>
+                <li><Link href="/grass-vs-honeygain" className="text-grass-primary-dark hover:underline">Grass vs Honeygain</Link></li>
+                <li><Link href="/grass-airdrop-season-2" className="text-grass-primary-dark hover:underline">Airdrop Season 2 & 3</Link></li>
+              </ul>
+            </div>
           </nav>
 
           <div className="space-y-14">
@@ -337,7 +346,7 @@ export default function Page() {
                 Grass updates — {OFFER_VALIDITY_LABEL}
               </h2>
               <p className="mt-3 text-grass-text-secondary">
-                A token unlock is scheduled around <time dateTime="2026-02-28">28 February 2026</time>. Season 2 airdrop is planned for H1 2026 (~170M $GRASS). Eligibility favors consistent usage and Grass Points. Referral codes and points rewards remain relevant in 2026.
+                The Grass token unlock took place in early 2026. The Season 2 airdrop distributed ~170M $GRASS tokens to eligible users. Grass continues to reward consistent uptime and points accumulation. Referral codes and bonus points remain fully active in {OFFER_VALIDITY_LABEL}. Season 3 is expected to follow a similar structure — sign up now with the referral code above to start building your eligibility.
               </p>
             </section>
 
@@ -456,7 +465,7 @@ export default function Page() {
                   </h3>
                   <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
                     <p className="mt-2 text-grass-text-secondary">
-                      Token unlock around <time dateTime="2026-02-28">28 February 2026</time>. Your Grass Points (including the {BONUS_POINTS.toLocaleString()} referral bonus) still count; Season 2 airdrop (H1 2026) will distribute ~170M $GRASS. Referral codes remain valid in 2026.
+                      The token unlock happened in early 2026. Your Grass Points (including the {BONUS_POINTS.toLocaleString()} referral bonus) still count. Season 2 airdrop distributed ~170M $GRASS. Ongoing seasons continue to reward users. Referral codes remain valid in {OFFER_VALIDITY_LABEL}.
                     </p>
                   </div>
                 </article>
@@ -523,6 +532,39 @@ export default function Page() {
                   <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
                     <p className="mt-2 text-grass-text-secondary">
                       A 429 error means too many connection attempts from your side. Use fewer devices or wait before reconnecting. One node per network is recommended. Sign up with <a href={REFERRAL_LINK} rel="noopener noreferrer" className="font-medium text-grass-primary-dark underline">{REFERRAL_LINK}</a> for the {BONUS_POINTS.toLocaleString()} points bonus.
+                    </p>
+                  </div>
+                </article>
+
+                <article itemScope itemProp="mainEntity" itemType="https://schema.org/Question" className="rounded-xl border border-grass-secondary bg-grass-bg p-4">
+                  <h3 id="faq-season-3" className="text-lg font-semibold text-grass-black">
+                    Is there a Grass Season 3 airdrop?
+                  </h3>
+                  <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
+                    <p className="mt-2 text-grass-text-secondary">
+                      Grass has confirmed ongoing seasons beyond Season 2. Consistent uptime and Grass Points accumulation remain the best strategy for eligibility. Sign up now with <code className="rounded bg-grass-secondary px-1 font-mono">{REFERRAL_CODE}</code> via <a href={REFERRAL_LINK} rel="noopener noreferrer" className="font-medium text-grass-primary-dark underline">{REFERRAL_LINK}</a> for {BONUS_POINTS.toLocaleString()} bonus points after {BONUS_CONDITION_HOURS}h.
+                    </p>
+                  </div>
+                </article>
+
+                <article itemScope itemProp="mainEntity" itemType="https://schema.org/Question" className="rounded-xl border border-grass-secondary bg-grass-bg p-4">
+                  <h3 id="faq-desktop-node-code" className="text-lg font-semibold text-grass-black">
+                    What is the Grass desktop node referral code?
+                  </h3>
+                  <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
+                    <p className="mt-2 text-grass-text-secondary">
+                      The Grass desktop node referral code is <code className="rounded bg-grass-secondary px-1 font-mono">{REFERRAL_CODE}</code>. Use the sign-up link <a href={REFERRAL_LINK} rel="noopener noreferrer" className="font-medium text-grass-primary-dark underline">{REFERRAL_LINK}</a> to register with the code pre-filled. The desktop node earns 2x points compared to the Chrome extension. You also get {BONUS_POINTS.toLocaleString()} bonus points after {BONUS_CONDITION_HOURS}h.
+                    </p>
+                  </div>
+                </article>
+
+                <article itemScope itemProp="mainEntity" itemType="https://schema.org/Question" className="rounded-xl border border-grass-secondary bg-grass-bg p-4">
+                  <h3 id="faq-referral-program" className="text-lg font-semibold text-grass-black">
+                    How does the Grass referral program work in 2026?
+                  </h3>
+                  <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
+                    <p className="mt-2 text-grass-text-secondary">
+                      The Grass referral program lets you earn bonus points by inviting new users. When someone signs up with your referral code (like <code className="rounded bg-grass-secondary px-1 font-mono">{REFERRAL_CODE}</code> via <a href={REFERRAL_LINK} rel="noopener noreferrer" className="font-medium text-grass-primary-dark underline">the referral link</a>), they get {BONUS_POINTS.toLocaleString()} bonus points after {BONUS_CONDITION_HOURS}h. You also earn 2,500 points plus 20% of their Grass points.
                     </p>
                   </div>
                 </article>

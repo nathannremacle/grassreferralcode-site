@@ -10,7 +10,7 @@ import {
 } from "@/lib/constants";
 
 // Updated by GitHub Action "update-freshness" (dateModified only)
-const DATE_MODIFIED = "2026-06-01";
+const DATE_MODIFIED = "2026-06-21";
 
 function lastDayOfMonth(ym: string): string {
   const [y, m] = ym.split("-").map(Number);
@@ -24,12 +24,12 @@ const FAQ_ITEMS = [
     answer: `You need ${BONUS_CONDITION_HOURS} cumulative hours of running the Grass app to unlock the ${BONUS_POINTS} referral bonus points. Sign up with the referral code ${REFERRAL_CODE} or via ${REFERRAL_LINK}; the bonus is credited automatically once you reach ${BONUS_CONDITION_HOURS} hours. Valid in ${OFFER_VALIDITY_LABEL}.`,
   },
   {
-    question: "What is the best Grass referral code to use in February 2026?",
+    question: `What is the best Grass referral code to use in ${OFFER_VALIDITY_LABEL}?`,
     answer: `A valid Grass referral code for ${OFFER_VALIDITY_LABEL} is ${REFERRAL_CODE}. Use the sign-up link ${REFERRAL_LINK} so the code is pre-filled. This gives you a bonus of ${BONUS_POINTS} points after ${BONUS_CONDITION_HOURS} hours of use.`,
   },
   {
     question: "When is the Grass token unlock and does it affect my points?",
-    answer: `The Grass token unlock is scheduled around 28 February 2026. Grass Points you earn (including the ${BONUS_POINTS} referral bonus after ${BONUS_CONDITION_HOURS} hours) remain relevant; Season 2 airdrop (H1 2026) will distribute around 170 million $GRASS tokens, with eligibility favoring consistent usage and points accumulation. Referral codes and points are still valid in 2026.`,
+    answer: `The Grass token unlock happened in early 2026. Grass Points you earn (including the ${BONUS_POINTS} referral bonus after ${BONUS_CONDITION_HOURS} hours) remain relevant; Season 2 airdrop distributed $GRASS tokens, with ongoing eligibility for future seasons favoring consistent usage and points accumulation. Referral codes and points are still valid in ${OFFER_VALIDITY_LABEL}.`,
   },
   {
     question: "Can I still sign up for Grass with a referral code in 2026?",
@@ -54,6 +54,18 @@ const FAQ_ITEMS = [
   {
     question: "What does Grass 429 too many requests mean?",
     answer: `A 429 error means too many connection attempts from your side. Use fewer devices or wait before reconnecting. One node per network is recommended. Sign up with ${REFERRAL_LINK} for the ${BONUS_POINTS} points bonus.`,
+  },
+  {
+    question: "Is there a Grass Season 3 airdrop?",
+    answer: `Grass has confirmed ongoing seasons beyond Season 2. Consistent uptime and Grass Points accumulation remain the best strategy for eligibility. Sign up now with referral code ${REFERRAL_CODE} via ${REFERRAL_LINK} to get ${BONUS_POINTS} bonus points after ${BONUS_CONDITION_HOURS} hours and maximize your airdrop eligibility.`,
+  },
+  {
+    question: "What is the Grass desktop node referral code?",
+    answer: `The Grass desktop node referral code is ${REFERRAL_CODE}. Use the sign-up link ${REFERRAL_LINK} to register with the code pre-filled. The desktop node earns 2x points compared to the Chrome extension. You also get ${BONUS_POINTS} bonus points after ${BONUS_CONDITION_HOURS} hours of uptime.`,
+  },
+  {
+    question: "How does the Grass referral program work in 2026?",
+    answer: `The Grass referral program lets you earn bonus points by inviting new users. When someone signs up with your referral code (like ${REFERRAL_CODE} via ${REFERRAL_LINK}), they get ${BONUS_POINTS} bonus points after ${BONUS_CONDITION_HOURS} hours. You also earn 2,500 points plus 20% of their Grass points as ongoing referral rewards.`,
   },
 ];
 
@@ -167,6 +179,36 @@ export function StructuredData() {
     })),
   };
 
+  const howTo = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: "How to use a Grass referral code in 2026",
+    description: `Sign up for Grass with referral code ${REFERRAL_CODE} to get ${BONUS_POINTS} bonus points after ${BONUS_CONDITION_HOURS} hours of uptime.`,
+    step: [
+      {
+        "@type": "HowToStep",
+        name: "Open the sign-up link",
+        text: `Go to ${REFERRAL_LINK} — the referral code ${REFERRAL_CODE} is pre-filled.`,
+        url: REFERRAL_LINK,
+      },
+      {
+        "@type": "HowToStep",
+        name: "Create your account",
+        text: "Enter your email and create a password. The referral code is automatically applied.",
+      },
+      {
+        "@type": "HowToStep",
+        name: "Install the Grass app",
+        text: "Download and install the Grass desktop node (2x points) or Chrome extension.",
+      },
+      {
+        "@type": "HowToStep",
+        name: `Reach ${BONUS_CONDITION_HOURS} hours to unlock your bonus`,
+        text: `Keep the Grass app running. After ${BONUS_CONDITION_HOURS} cumulative hours, your ${BONUS_POINTS} bonus points are credited automatically.`,
+      },
+    ],
+  };
+
   return (
     <>
       <script
@@ -197,6 +239,12 @@ export function StructuredData() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(faqPage),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(howTo),
         }}
       />
     </>

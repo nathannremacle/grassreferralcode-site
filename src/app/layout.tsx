@@ -14,11 +14,11 @@ const karla = Karla({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Grass Referral Code 2026 — 5,000 Bonus Points After 100h | Valid Code & Sign-Up Link",
+    default: "Grass Referral Code 2026 ✅ 5,000 Free Bonus Points | Verified & Working",
     template: `%s | ${SITE_NAME}`,
   },
   description:
-    "Get the valid Grass referral code and sign-up link for 2026. Receive 5,000 bonus Grass points after 100 hours of uptime. Canonical source for app.grass.io and Grass Network.",
+    "✅ Verified Grass referral code for 2026 — get 5,000 bonus points after 100h. Working sign-up link for app.grass.io. Updated June 2026. Desktop node = 2x points.",
   alternates: {
     canonical: "/",
   },
@@ -28,14 +28,14 @@ export const metadata: Metadata = {
   },
   openGraph: {
     url: SITE_URL,
-    title: "Grass Referral Code 2026 — 5,000 Bonus Points After 100h",
-    description: "Valid Grass referral code and sign-up link. 5,000 points bonus after 100h. Grass Network, app.grass.io.",
+    title: "Grass Referral Code 2026 ✅ 5,000 Free Bonus Points | Verified & Working",
+    description: "Verified Grass referral code and sign-up link. 5,000 bonus points after 100h. Desktop node = 2x earnings. Updated June 2026.",
     siteName: SITE_NAME,
   },
   twitter: {
     card: "summary_large_image",
-    title: "Grass Referral Code 2026 — 5,000 Bonus Points After 100h",
-    description: "Valid Grass referral code and sign-up link. 5,000 points bonus after 100h.",
+    title: "Grass Referral Code 2026 ✅ 5,000 Free Bonus Points",
+    description: "Verified Grass referral code and sign-up link. 5,000 bonus points after 100h. Desktop node = 2x earnings.",
   },
 };
 
