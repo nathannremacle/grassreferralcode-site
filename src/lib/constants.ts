@@ -24,6 +24,6 @@ export const SITE_URL =
 export const SITE_NAME = "Grass Referral Code";
 
 // Trust signals (updated by GitHub Action with dateModified)
-export const LAST_VERIFIED_ISO = "2026-06-21";
+export const LAST_VERIFIED_ISO = "2026-07-01";
 export const SUCCESS_RATE = "99.9%";
 export const VERIFIED_USERS_COUNT = "50,000+";
