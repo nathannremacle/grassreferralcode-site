@@ -77,6 +77,9 @@ export function SubPageFooter() {
           {" · "}
           <a href="https://www.grass.io/privacy-policy" rel="noopener noreferrer" className="text-grass-primary-dark hover:underline">Privacy</a>
         </p>
+        <p className="mt-6 text-xs text-grass-text-secondary opacity-50 hover:opacity-80 transition-opacity">
+          <a href="https://www.init42.be/" target="_blank" rel="noopener" className="hover:underline">Création de site web à Liège par INIT42</a>
+        </p>
       </div>
     </footer>
   );
