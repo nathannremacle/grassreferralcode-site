@@ -13,9 +13,8 @@ export default function EarningsCalculator() {
   const dailyPoints = hours * basePointsPerHour * multiplier;
   const monthlyPoints = dailyPoints * 30;
   const bonus = 5000;
-  
   const totalFirstMonth = monthlyPoints + bonus;
-
+  const usdEstimated = ((totalFirstMonth / 100000) * 7.52).toFixed(2);
   return (
     <div className="w-full max-w-lg mx-auto bg-grass-white rounded-2xl shadow-xl overflow-hidden border border-grass-secondary transition-all hover:shadow-2xl">
       <div className="p-6 sm:p-8">
@@ -88,9 +87,14 @@ export default function EarningsCalculator() {
           </div>
           <div className="border-t border-grass-secondary pt-3 mt-3 flex justify-between items-center">
             <span className="text-base font-bold text-grass-black">First Month Total:</span>
-            <span className="text-2xl font-bold font-mono text-grass-primary-dark">
-              {totalFirstMonth.toLocaleString()}
-            </span>
+            <div className="text-right">
+              <span className="block text-2xl font-bold font-mono text-grass-primary-dark">
+                {totalFirstMonth.toLocaleString()}
+              </span>
+              <span className="block text-sm text-grass-text-secondary font-medium mt-1">
+                ≈ ${usdEstimated} USD
+              </span>
+            </div>
           </div>
         </div>
 
@@ -104,7 +108,7 @@ export default function EarningsCalculator() {
           Claim {bonus.toLocaleString()} Bonus Points
         </a>
         <p className="text-xs text-center text-grass-text-secondary mt-3">
-          *Estimates based on typical 2026 network Epoch averages. Actual earnings depend on network demand and connection quality. Use code <span className="font-mono font-medium">{REFERRAL_CODE}</span>.
+          *Estimates based on typical 2026 network Epoch averages (~$7.52 USD per 100k points). Actual earnings depend on network demand and connection quality. Use code <span className="font-mono font-medium">{REFERRAL_CODE}</span>.
         </p>
       </div>
     </div>
