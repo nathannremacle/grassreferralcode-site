@@ -51,10 +51,16 @@ export default function Page() {
               <a
                 href={REFERRAL_LINK}
                 rel="noopener noreferrer"
-                className="text-sm font-medium text-grass-text-secondary hover:text-grass-black"
+                className="text-sm font-medium text-grass-text-secondary hover:text-grass-black hidden sm:block"
               >
                 Download
               </a>
+              <Link
+                href="/grass-earnings-calculator"
+                className="text-sm font-medium text-grass-text-secondary hover:text-grass-black"
+              >
+                Calculator
+              </Link>
               <a
                 href="https://www.grass.io/learn"
                 rel="noopener noreferrer"
@@ -187,6 +193,7 @@ export default function Page() {
             <div className="mt-3 border-t border-grass-secondary pt-3">
               <h3 className="text-xs font-semibold uppercase tracking-wider text-grass-text-secondary">Related guides</h3>
               <ul className="mt-1.5 flex flex-wrap gap-x-4 gap-y-1 text-sm">
+                <li><Link href="/grass-earnings-calculator" className="text-grass-primary-dark hover:underline font-medium">Earnings Calculator</Link></li>
                 <li><Link href="/how-to-install-grass" className="text-grass-primary-dark hover:underline">How to install Grass</Link></li>
                 <li><Link href="/grass-vs-honeygain" className="text-grass-primary-dark hover:underline">Grass vs Honeygain</Link></li>
                 <li><Link href="/grass-airdrop-season-2" className="text-grass-primary-dark hover:underline">Airdrop Season 2 & 3</Link></li>
