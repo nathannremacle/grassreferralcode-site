@@ -23,6 +23,10 @@ export const SITE_URL =
 /** Brand name for metadata, JSON-LD, og:site_name */
 export const SITE_NAME = "Grass Referral Code";
 
+/** IndexNow key for instant Bing/Yandex search indexing */
+export const INDEXNOW_KEY = "4c2b9f8e1d5a73604e8b2a19f3d65e71";
+
+
 // Trust signals (updated by GitHub Action with dateModified)
 export const LAST_VERIFIED_ISO = "2026-07-01";
 export const SUCCESS_RATE = "99.9%";

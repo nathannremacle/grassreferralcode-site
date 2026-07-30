@@ -51,4 +51,6 @@ jobs:
           else
             git commit -m "chore(geo): update freshness — ${{ steps.date.outputs.label }}, dateModified ${{ steps.date.outputs.full }}"
             git push
+            npm run submit-indexnow || true
           fi
+
