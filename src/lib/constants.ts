@@ -28,6 +28,7 @@ export const INDEXNOW_KEY = "4c2b9f8e1d5a73604e8b2a19f3d65e71";
 
 
 // Trust signals (updated by GitHub Action with dateModified)
-export const LAST_VERIFIED_ISO = "2026-07-01";
+export const LAST_VERIFIED_ISO = "2026-07-30";
+
 export const SUCCESS_RATE = "99.9%";
 export const VERIFIED_USERS_COUNT = "50,000+";

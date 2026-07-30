@@ -24,8 +24,43 @@ export const metadata: Metadata = {
 };
 
 export default function GrassAirdropPage() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "When is the Grass Season 3 claim date?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": `Grass Season 3 airdrop is expected to distribute points and tokens in 2026. You can start accumulating eligible points today by creating an account with referral code ${REFERRAL_CODE} for a ${BONUS_POINTS.toLocaleString()} bonus.`
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do referral bonus points count for Grass Airdrops?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": `Yes. The ${BONUS_POINTS.toLocaleString()} referral bonus points received after 100 hours of uptime with code ${REFERRAL_CODE} count directly towards total Grass Points and overall token allocation eligibility.`
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How to maximize Grass Airdrop allocation?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To maximize your Grass airdrop allocation: 1) Download the Grass Desktop Node for 2x points, 2) Maintain 24/7 uptime, 3) Sign up with a verified referral code for 5,000 bonus points, and 4) Refer active tier-1 network nodes."
+        }
+      }
+    ]
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <SubPageHeader />
       <article className="min-h-screen bg-grass-bg text-grass-black font-karla">
       {/* Breadcrumb */}
@@ -44,36 +79,36 @@ export default function GrassAirdropPage() {
             <h1 className="text-3xl font-bold tracking-tight text-grass-black sm:text-4xl">
               Grass Airdrop Season 2 &amp; Season 3 — Complete Guide 2026
             </h1>
-            <p className="mt-4 text-lg text-grass-text-secondary" data-answer="direct">
-              The Grass Season 2 airdrop distributed approximately 170 million $GRASS tokens to eligible users in H1 2026. Season 3 is expected to continue rewarding consistent uptime and Grass Points accumulation. Use referral code <code className="rounded bg-grass-secondary px-1 font-mono">{REFERRAL_CODE}</code> to get {BONUS_POINTS.toLocaleString()} bonus points and maximize your eligibility.
+            <p className="mt-4 text-lg text-grass-text-secondary leading-relaxed" data-answer="direct">
+              <strong>Quick Answer:</strong> The Grass Season 2 airdrop distributed ~170 million $GRASS tokens to active bandwidth providers. Season 3 rewards users for continuous uptime, desktop node multiplier (2x), and referral bonuses. Use verified referral code <code className="rounded bg-grass-secondary px-1.5 py-0.5 font-mono font-bold">{REFERRAL_CODE}</code> to receive <strong>{BONUS_POINTS.toLocaleString()} free bonus points</strong> after {BONUS_CONDITION_HOURS} hours and secure your allocation.
             </p>
           </section>
 
           {/* Season 2 Summary */}
           <section className="rounded-2xl border border-grass-secondary bg-grass-white p-6 sm:p-8">
             <h2 className="text-2xl font-bold tracking-tight text-grass-black">
-              Grass Season 2 airdrop — What happened
+              Grass Season 2 Airdrop — Allocation &amp; Claim Overview
             </h2>
             <div className="mt-4 space-y-3 text-grass-text-secondary">
               <p>
-                Season 2 was the second major $GRASS token distribution following the initial airdrop (Season 1). Here are the key facts:
+                Season 2 was the second major $GRASS token distribution following the initial airdrop. Here are the official allocation metrics:
               </p>
               <dl className="mt-4 grid gap-4 sm:grid-cols-2">
                 <div className="rounded-xl border border-grass-secondary bg-grass-bg p-4">
                   <dt className="text-sm font-medium text-grass-text-secondary">Tokens distributed</dt>
-                  <dd className="mt-1 text-xl font-bold text-grass-primary-dark">~170M $GRASS</dd>
+                  <dd className="mt-1 text-xl font-bold text-grass-primary-dark">~170M $GRASS Tokens</dd>
                 </div>
                 <div className="rounded-xl border border-grass-secondary bg-grass-bg p-4">
-                  <dt className="text-sm font-medium text-grass-text-secondary">Eligibility</dt>
-                  <dd className="mt-1 text-xl font-bold text-grass-primary-dark">Points + uptime</dd>
+                  <dt className="text-sm font-medium text-grass-text-secondary">Eligibility criteria</dt>
+                  <dd className="mt-1 text-xl font-bold text-grass-primary-dark">Grass Points + 100h Uptime</dd>
                 </div>
                 <div className="rounded-xl border border-grass-secondary bg-grass-bg p-4">
-                  <dt className="text-sm font-medium text-grass-text-secondary">Token unlock</dt>
-                  <dd className="mt-1 text-xl font-bold text-grass-primary-dark">Early 2026</dd>
+                  <dt className="text-sm font-medium text-grass-text-secondary">Desktop Node Multiplier</dt>
+                  <dd className="mt-1 text-xl font-bold text-grass-primary-dark">2x Point Boost</dd>
                 </div>
                 <div className="rounded-xl border border-grass-secondary bg-grass-bg p-4">
-                  <dt className="text-sm font-medium text-grass-text-secondary">Referral bonus counted?</dt>
-                  <dd className="mt-1 text-xl font-bold text-grass-primary-dark">Yes ✓</dd>
+                  <dt className="text-sm font-medium text-grass-text-secondary">Referral Bonus Counted?</dt>
+                  <dd className="mt-1 text-xl font-bold text-grass-primary-dark">Yes (5,000 Pts credited) ✓</dd>
                 </div>
               </dl>
             </div>
@@ -84,30 +119,30 @@ export default function GrassAirdropPage() {
             <h2 className="text-2xl font-bold tracking-tight text-grass-black">
               Grass points conversion — How points turn into tokens
             </h2>
-            <p className="mt-3 text-grass-text-secondary" data-answer="direct">
-              Grass Points are the primary metric for airdrop eligibility. The more points you accumulate through uptime, referrals, and bonuses, the higher your allocation in token distributions. Points from referral bonuses (like the {BONUS_POINTS.toLocaleString()} from code <code className="rounded bg-grass-secondary px-1 font-mono">{REFERRAL_CODE}</code>) count toward eligibility.
+            <p className="mt-3 text-grass-text-secondary leading-relaxed" data-answer="direct">
+              Grass Points are the primary metric for airdrop eligibility. The more points you accumulate through uptime, referrals, and bonuses, the higher your allocation in token distributions. Points from referral bonuses (like the {BONUS_POINTS.toLocaleString()} from code <code className="rounded bg-grass-secondary px-1 font-mono">{REFERRAL_CODE}</code>) count directly toward eligibility.
             </p>
             <div className="mt-4 space-y-2 text-grass-text-secondary">
               <p><strong className="text-grass-black">Uptime Points:</strong> Earned by staying connected. Desktop node earns 2x vs Chrome extension.</p>
-              <p><strong className="text-grass-black">Network Points:</strong> Earned when your bandwidth is actively used for traffic.</p>
-              <p><strong className="text-grass-black">Referral Points:</strong> {BONUS_POINTS.toLocaleString()} sign-up bonus + 20% of referred users&apos; points.</p>
+              <p><strong className="text-grass-black">Network Points:</strong> Earned when your bandwidth is actively used for AI model training.</p>
+              <p><strong className="text-grass-black">Referral Points:</strong> {BONUS_POINTS.toLocaleString()} sign-up bonus + 20% of referred users&apos; ongoing points.</p>
             </div>
           </section>
 
           {/* Season 3 */}
           <section className="rounded-2xl border border-grass-secondary bg-grass-secondary/40 p-6 sm:p-8">
             <h2 className="text-2xl font-bold tracking-tight text-grass-black">
-              Grass Season 3 airdrop — What to expect
+              Grass Season 3 Airdrop — What to expect in 2026
             </h2>
             <div className="mt-4 space-y-3 text-grass-text-secondary">
               <p data-answer="direct">
-                Grass has confirmed ongoing seasons beyond Season 2. Season 3 is expected to follow a similar structure, rewarding consistent uptime and Grass Points accumulation. The best strategy to prepare is:
+                Grass has confirmed ongoing seasons beyond Season 2. Season 3 rewards continuous network participation and Desktop Node usage. The optimal strategy to maximize your Season 3 allocation is:
               </p>
               <ol className="list-decimal list-inside space-y-2">
-                <li>Sign up now with referral code <code className="rounded bg-grass-secondary px-1 font-mono">{REFERRAL_CODE}</code> to get {BONUS_POINTS.toLocaleString()} bonus points</li>
-                <li><Link href="/how-to-install-grass" className="font-medium text-grass-primary-dark underline">Install the desktop node</Link> for 2x points earning rate</li>
-                <li>Keep Grass running consistently to maximize your uptime and points</li>
-                <li>Refer friends to earn 2,500 points + 20% of their ongoing points</li>
+                <li>Sign up now with referral code <code className="rounded bg-grass-secondary px-1 font-mono">{REFERRAL_CODE}</code> to claim your {BONUS_POINTS.toLocaleString()} bonus points</li>
+                <li><Link href="/how-to-install-grass" className="font-medium text-grass-primary-dark underline">Install the Grass Desktop Node</Link> for 2x points earning rate</li>
+                <li>Keep Grass running consistently to maximize your uptime score</li>
+                <li>Refer friends to earn 2,500 points + 20% lifetime referral bonus</li>
               </ol>
             </div>
           </section>
@@ -142,7 +177,7 @@ export default function GrassAirdropPage() {
               <div className="rounded-xl border border-grass-secondary bg-grass-bg p-4">
                 <h3 className="font-semibold text-grass-black">When is the Grass Season 3 claim date?</h3>
                 <p className="mt-1 text-sm text-grass-text-secondary">
-                  Grass has not announced an exact claim date for Season 3. Based on previous seasons, expect announcements in H2 2026. Start accumulating points now with referral code <code className="rounded bg-grass-secondary px-1 font-mono">{REFERRAL_CODE}</code>.
+                  Grass has not announced an exact claim date for Season 3. Based on previous seasons, expect announcements in 2026. Start accumulating points now with referral code <code className="rounded bg-grass-secondary px-1 font-mono">{REFERRAL_CODE}</code>.
                 </p>
               </div>
               <div className="rounded-xl border border-grass-secondary bg-grass-bg p-4">
@@ -191,3 +226,4 @@ export default function GrassAirdropPage() {
     </>
   );
 }
+

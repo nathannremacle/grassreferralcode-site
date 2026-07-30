@@ -11,21 +11,52 @@ import {
 } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "How to Install Grass — Desktop Node & Chrome Extension Guide 2026",
-  description: `Step-by-step guide to install Grass desktop node and Chrome extension in 2026. Desktop node earns 2x points. Use referral code ${REFERRAL_CODE} for ${BONUS_POINTS.toLocaleString()} bonus points.`,
+  title: "How to Install Grass Desktop Node & Chrome Extension (2026 Referral Code)",
+  description: `Complete step-by-step guide to install Grass Desktop Node and Chrome extension in 2026. Desktop node earns 2x points. Use referral code ${REFERRAL_CODE} for ${BONUS_POINTS.toLocaleString()} bonus points.`,
   alternates: {
     canonical: "/how-to-install-grass",
   },
   openGraph: {
     url: `${SITE_URL}/how-to-install-grass`,
-    title: "How to Install Grass — Desktop Node & Chrome Extension Guide 2026",
+    title: "How to Install Grass Desktop Node & Chrome Extension (2026 Referral Code)",
     description: `Complete installation guide for Grass. Desktop node = 2x points. Code ${REFERRAL_CODE} for ${BONUS_POINTS.toLocaleString()} bonus.`,
   },
 };
 
 export default function HowToInstallGrassPage() {
+  const howToSchema = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Install Grass Desktop Node and Chrome Extension",
+    "description": `Step-by-step guide to installing Grass Desktop Node or Chrome extension to earn passive rewards. Use referral code ${REFERRAL_CODE} for ${BONUS_POINTS.toLocaleString()} bonus points after 100 hours.`,
+    "step": [
+      {
+        "@type": "HowToStep",
+        "name": "Sign up with Grass referral code",
+        "text": `Create an account at app.grass.io using referral code ${REFERRAL_CODE} to activate your ${BONUS_POINTS.toLocaleString()} bonus points eligibility.`,
+        "url": `${SITE_URL}/how-to-install-grass#step-1`
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Download Grass Desktop Node (Recommended)",
+        "text": "Download the Grass Desktop Node installer for Windows, macOS, or Linux from the official dashboard. The desktop node yields 2x network multiplier.",
+        "url": `${SITE_URL}/how-to-install-grass#step-2`
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Reach 100 Hours Uptime Benchmark",
+        "text": `Keep Grass running in the background for 100 cumulative hours to receive ${BONUS_POINTS.toLocaleString()} bonus points credited directly to your dashboard.`,
+        "url": `${SITE_URL}/how-to-install-grass#step-3`
+      }
+    ]
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
+      />
       <SubPageHeader />
       <article className="min-h-screen bg-grass-bg text-grass-black font-karla">
       {/* Breadcrumb */}
@@ -42,15 +73,39 @@ export default function HowToInstallGrassPage() {
           {/* Hero */}
           <section>
             <h1 className="text-3xl font-bold tracking-tight text-grass-black sm:text-4xl">
-              How to Install Grass — Desktop Node &amp; Chrome Extension Guide
+              How to Install Grass — Desktop Node &amp; Chrome Extension Guide (2026)
             </h1>
-            <p className="mt-4 text-lg text-grass-text-secondary" data-answer="direct">
-              To install Grass, sign up at <a href={REFERRAL_LINK} rel="noopener noreferrer" className="font-medium text-grass-primary-dark underline">{REFERRAL_LINK}</a> with referral code <code className="rounded bg-grass-secondary px-1 font-mono">{REFERRAL_CODE}</code>, then download the desktop node (recommended, 2x points) or Chrome extension. You&apos;ll get {BONUS_POINTS.toLocaleString()} bonus points after {BONUS_CONDITION_HOURS} hours of uptime.
+            <p className="mt-4 text-lg text-grass-text-secondary leading-relaxed" data-answer="direct">
+              <strong>Quick Answer:</strong> To install Grass, create an account at <a href={REFERRAL_LINK} rel="noopener noreferrer" className="font-medium text-grass-primary-dark underline">{REFERRAL_LINK}</a> using the verified referral code <code className="rounded bg-grass-secondary px-1.5 py-0.5 font-mono font-bold">{REFERRAL_CODE}</code>. Next, download the <strong>Grass Desktop Node</strong> (recommended for 2x point multiplier) or Chrome extension. You will automatically unlock <strong>{BONUS_POINTS.toLocaleString()} free bonus points</strong> after {BONUS_CONDITION_HOURS} hours of continuous uptime.
             </p>
           </section>
 
+          {/* Desktop Node Referral Code Focus Banner */}
+          <section className="rounded-2xl border border-emerald-500/30 bg-emerald-950/10 p-6 sm:p-8 shadow-sm">
+            <h2 className="text-xl font-bold text-slate-900 mb-2">
+              ⚡ Looking for the Grass Desktop Node Referral Code?
+            </h2>
+            <p className="text-grass-text-secondary text-base mb-4">
+              The official Grass Desktop Node requires a valid referral code during account registration to activate your <strong>5,000 bonus points</strong> and <strong>2x earning rate multiplier</strong>.
+            </p>
+            <div className="flex flex-wrap items-center gap-3 bg-white p-4 rounded-xl border border-emerald-500/20">
+              <span className="text-sm font-semibold text-slate-700">Desktop Node Code:</span>
+              <code className="font-mono font-bold text-lg text-emerald-600 bg-emerald-50 px-3 py-1 rounded border border-emerald-200">
+                {REFERRAL_CODE}
+              </code>
+              <a
+                href={REFERRAL_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="ml-auto px-4 py-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm rounded-lg transition-colors"
+              >
+                Apply Code &amp; Download Node →
+              </a>
+            </div>
+          </section>
+
           {/* Step 1 */}
-          <section className="rounded-2xl border border-grass-secondary bg-grass-white p-6 sm:p-8">
+          <section id="step-1" className="rounded-2xl border border-grass-secondary bg-grass-white p-6 sm:p-8">
             <div className="flex items-center gap-4">
               <span className="flex h-12 w-12 items-center justify-center rounded-full bg-grass-primary text-lg font-bold text-grass-black">1</span>
               <h2 className="text-2xl font-bold tracking-tight text-grass-black">
@@ -68,7 +123,7 @@ export default function HowToInstallGrassPage() {
           </section>
 
           {/* Step 2 — Desktop Node */}
-          <section className="rounded-2xl border border-grass-secondary bg-grass-secondary/40 p-6 sm:p-8">
+          <section id="step-2" className="rounded-2xl border border-grass-secondary bg-grass-secondary/40 p-6 sm:p-8">
             <div className="flex items-center gap-4">
               <span className="flex h-12 w-12 items-center justify-center rounded-full bg-grass-primary text-lg font-bold text-grass-black">2</span>
               <h2 className="text-2xl font-bold tracking-tight text-grass-black">
@@ -87,6 +142,46 @@ export default function HowToInstallGrassPage() {
                 <li>Log in with the same email and password you used to sign up</li>
                 <li>The node starts running automatically — you&apos;ll see your connection status in the system tray</li>
               </ol>
+            </div>
+          </section>
+
+          {/* Comparison Table */}
+          <section className="rounded-2xl border border-grass-secondary bg-grass-white p-6 sm:p-8">
+            <h2 className="text-2xl font-bold tracking-tight text-grass-black mb-4">
+              Grass Desktop Node vs Chrome Extension
+            </h2>
+            <div className="overflow-x-auto">
+              <table className="w-full text-left text-sm border-collapse">
+                <thead>
+                  <tr className="border-b border-slate-200 bg-slate-50">
+                    <th className="p-3 font-bold text-slate-800">Feature</th>
+                    <th className="p-3 font-bold text-emerald-700 bg-emerald-50">Grass Desktop Node (Recommended)</th>
+                    <th className="p-3 font-bold text-slate-700">Chrome Extension</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-slate-200">
+                  <tr>
+                    <td className="p-3 font-medium">Point Multiplier</td>
+                    <td className="p-3 font-bold text-emerald-600 bg-emerald-50/50">2x Multiplier (Double Points)</td>
+                    <td className="p-3">1x Standard Multiplier</td>
+                  </tr>
+                  <tr>
+                    <td className="p-3 font-medium">Daily Point Yield</td>
+                    <td className="p-3 font-bold text-emerald-600 bg-emerald-50/50">~4,800 - 6,000 Points/day</td>
+                    <td className="p-3">~2,400 Points/day</td>
+                  </tr>
+                  <tr>
+                    <td className="p-3 font-medium">Background Operation</td>
+                    <td className="p-3 bg-emerald-50/50">System Service (Runs without browser)</td>
+                    <td className="p-3">Requires Chrome Browser open</td>
+                  </tr>
+                  <tr>
+                    <td className="p-3 font-medium">Bonus Eligibility</td>
+                    <td className="p-3 font-bold text-emerald-600 bg-emerald-50/50">Eligible for +5,000 Pts Bonus</td>
+                    <td className="p-3">Eligible for +5,000 Pts Bonus</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </section>
 
@@ -112,7 +207,7 @@ export default function HowToInstallGrassPage() {
           </section>
 
           {/* Step 3 */}
-          <section className="rounded-2xl border border-grass-secondary bg-grass-white p-6 sm:p-8">
+          <section id="step-3" className="rounded-2xl border border-grass-secondary bg-grass-white p-6 sm:p-8">
             <div className="flex items-center gap-4">
               <span className="flex h-12 w-12 items-center justify-center rounded-full bg-grass-primary text-lg font-bold text-grass-black">3</span>
               <h2 className="text-2xl font-bold tracking-tight text-grass-black">
@@ -187,3 +282,4 @@ export default function HowToInstallGrassPage() {
     </>
   );
 }
+

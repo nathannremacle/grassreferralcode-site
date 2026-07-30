@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Karla } from "next/font/google";
 import { SITE_URL, SITE_NAME } from "@/lib/constants";
+import StickyCopyBar from "@/components/StickyCopyBar";
 import "./globals.css";
 
 /** Grass Media Kit typography: Karla, weights 200–800 — https://www.grass.io/media-kit */
@@ -18,7 +19,7 @@ export const metadata: Metadata = {
     template: `%s | ${SITE_NAME}`,
   },
   description:
-    "✅ Verified Grass referral code for 2026 — get 5,000 bonus points after 100h. Working sign-up link for app.grass.io. Updated June 2026. Desktop node = 2x points.",
+    "✅ Verified Grass referral code for 2026 — get 5,000 bonus points after 100h. Working sign-up link for app.grass.io. Updated July 2026. Desktop node = 2x points.",
   alternates: {
     canonical: "/",
   },
@@ -29,7 +30,7 @@ export const metadata: Metadata = {
   openGraph: {
     url: SITE_URL,
     title: "Grass Referral Code 2026 ✅ 5,000 Free Bonus Points | Verified & Working",
-    description: "Verified Grass referral code and sign-up link. 5,000 bonus points after 100h. Desktop node = 2x earnings. Updated June 2026.",
+    description: "Verified Grass referral code and sign-up link. 5,000 bonus points after 100h. Desktop node = 2x earnings. Updated July 2026.",
     siteName: SITE_NAME,
   },
   twitter: {
@@ -46,7 +47,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${karla.variable} font-karla antialiased`}>{children}</body>
+      <body className={`${karla.variable} font-karla antialiased`}>
+        {children}
+        <StickyCopyBar />
+      </body>
     </html>
   );
 }
+

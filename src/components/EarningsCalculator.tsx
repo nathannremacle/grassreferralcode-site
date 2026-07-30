@@ -98,15 +98,31 @@ export default function EarningsCalculator() {
           </div>
         </div>
 
-        {/* CTA */}
-        <a
-          href={REFERRAL_LINK}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="block w-full text-center bg-grass-black text-grass-primary py-3 rounded-lg font-bold hover:opacity-90 transition-opacity"
-        >
-          Claim {bonus.toLocaleString()} Bonus Points
-        </a>
+        {/* CTA & Viral Share */}
+        <div className="space-y-3">
+          <a
+            href={REFERRAL_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block w-full text-center bg-grass-black text-grass-primary py-3 rounded-lg font-bold hover:opacity-90 transition-opacity"
+          >
+            Claim {bonus.toLocaleString()} Bonus Points
+          </a>
+
+          <a
+            href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
+              `I just calculated my estimated @getgrass_io passive earnings: ${totalFirstMonth.toLocaleString()} Points (~$${usdEstimated} USD) in my first month! 🚀 Claim your 5,000 bonus points:`
+            )}&url=${encodeURIComponent("https://grassreferralcode.com/grass-earnings-calculator")}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center gap-2 w-full text-center bg-sky-500 hover:bg-sky-400 text-white py-2.5 rounded-lg text-sm font-semibold transition-colors shadow-sm"
+          >
+            <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+            </svg>
+            <span>Partager mes résultats sur X</span>
+          </a>
+        </div>
         <p className="text-xs text-center text-grass-text-secondary mt-3">
           *Estimates based on typical 2026 network Epoch averages (~$7.52 USD per 100k points). Actual earnings depend on network demand and connection quality. Use code <span className="font-mono font-medium">{REFERRAL_CODE}</span>.
         </p>
@@ -114,3 +130,4 @@ export default function EarningsCalculator() {
     </div>
   );
 }
+
