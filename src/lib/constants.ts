@@ -13,8 +13,8 @@ export const REFERRAL_CODE =
 
 export const BONUS_POINTS = 5000;
 export const BONUS_CONDITION_HOURS = 100;
-export const OFFER_VALIDITY = "2026-07"; // July 2026
-export const OFFER_VALIDITY_LABEL = "July 2026";
+export const OFFER_VALIDITY = "2026-08"; // July 2026
+export const OFFER_VALIDITY_LABEL = "August 2026";
 export const SITE_URL =
   typeof process !== "undefined" && process.env?.NEXT_PUBLIC_SITE_URL
     ? process.env.NEXT_PUBLIC_SITE_URL
@@ -28,7 +28,7 @@ export const INDEXNOW_KEY = "4c2b9f8e1d5a73604e8b2a19f3d65e71";
 
 
 // Trust signals (updated by GitHub Action with dateModified)
-export const LAST_VERIFIED_ISO = "2026-07-30";
+export const LAST_VERIFIED_ISO = "2026-08-01";
 
 export const SUCCESS_RATE = "99.9%";
 export const VERIFIED_USERS_COUNT = "50,000+";
